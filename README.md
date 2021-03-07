@@ -54,7 +54,7 @@
    	
    	while(1)
    	{ 
-   //		printf("The current value =%d  %d %d %d  		  \r\n",ADC_DualConvertedValueTab[0],ADC_DualConvertedValueTab[1],ADC_DualConvertedValueTab[2],ADC_DualConvertedValueTab[3]);//打印调试信息
+   //		printf("The current value =%d  %d %d %d	  \r\n",ADC_DualConvertedValueTab[0],ADC_DualConvertedValueTab[1],ADC_DualConvertedValueTab[2],ADC_DualConvertedValueTab[3]);//打印调试信息
           
    		delay_ms(500);
    	}
