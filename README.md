@@ -1,17 +1,19 @@
-# STM32F407_REBUILT
-为准备电赛对于STM32代码的阶段性整理
+# AD9959驱动
 
-branch2：tim_capture 定时器输入捕获代码整理
+1.引脚定义
 
-branch3:  pwm_gen  定时器PWM多路输出
+#define CS				PAout(1)
+#define SCLK		    PAout(2)
+#define SDIO0		  PAout(3)
+#define UPDATE	   PAout(6)
+#define Reset		    PAout(7)、
 
-branch4:  NEC红外发射
+2.调用示例
 
-branch5:  DAC DMA双通道
-
-branch6:  stm32f4数字滤波
-
-branch7:  FFT
-
-branch8:  AD9959驱动
-
+```c
+Init_AD9959();
+AD9959_Set_Freq(10000); //频率设置
+AD9959_SetPhase4Channel(0,0,90,0);//相位设置，对应4通道
+AD9959_SetAmp4Channel(1023,1023,1023,1023);//幅值设置
+```
+VPP(MAX) = 460mv
