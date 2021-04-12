@@ -1,19 +1,6 @@
-# STM32F407_REBUILT
-为准备电赛对于STM32代码的阶段性整理
+# STM32F4 US-015超声波测距
 
-branch2：tim_capture 定时器输入捕获代码整理
-
-branch3:  pwm_gen  定时器PWM多路输出
-
-branch4:  NEC红外发射
-
-branch5:  DAC DMA双通道
-
-branch6:  stm32f4数字滤波
-
-branch7:  FFT
-
-branch8:  AD9959驱动
-
-branch9:  DMA串口收发
-
+- PA0->Echo	PA4->Trig
+- 添加 timer_capture.c  dist_us.c
+- Dist_US_Start();即可测量
+- 实际10cm以上返回脉冲会间断，初步考虑与模块相关
