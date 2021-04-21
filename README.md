@@ -1,6 +1,6 @@
 # MARTIX_KEY （矩阵键盘驱动）
 
-- PD0~PD7对应R1~C4
+- PD0-PD7对应R1-C4
 
 - MARTIX_KEY_SCAN() 函数返回对应的1~16按键值
 
