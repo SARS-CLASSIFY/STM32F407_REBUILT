@@ -1,28 +1,16 @@
-# STM32F407_REBUILT
-为准备电赛对于STM32代码的阶段性整理
+# MARTIX_KEY （矩阵键盘驱动）
 
-branch2：tim_capture 定时器输入捕获代码整理
+- PD0~PD7对应R1~C4
 
-branch3:  pwm_gen  定时器PWM多路输出
+- MARTIX_KEY_SCAN() 函数返回对应的1~16按键值
 
-branch4:  NEC红外发射
+- 调用示例
 
-branch5:  DAC DMA双通道
+  ```c
+  	martix_key_init();
+  	u8 t = 0;
+  	t=MARTIX_KEY_SCAN();
+  ```
 
-branch6:  stm32f4数字滤波
+  
 
-branch7:  FFT
-
-branch8:  AD9959驱动
-
-branch9:  DMA串口收发
-
-branch10: II2
-
-branch11: flash
-
-branch12: US-015
-
-branch13： SSD1306
-
-branch14： martix_key
