@@ -1,28 +1,29 @@
-# STM32F407_REBUILT
-为准备电赛对于STM32代码的阶段性整理
+# AD9910驱动代码
 
-branch2：tim_capture 定时器输入捕获代码整理
+1. 引脚配置
 
-branch3:  pwm_gen  定时器PWM多路输出
+   ```c
+    /*-------------- Freq_convert() 函数直接用于设置频率 ------
+      -------------- Amp_convert()  函数用于设置幅值     -----
+    --		PWR 			-> PC7
+    --   PROFILE1 	-> PA11
+    --		DRCTL			-> PC11
+    --		SDIO			-> PD0
+    --		SCLK			-> PD3
+    --		CS				-> PD5
+    --		REST			-> PC6
+    --		PROFILE2	-> PA10
+    --		PROFILE0	-> PA12
+    --		UP_DAT		-> PA15
+    --		DRHOLD		-> PC12	 
+    */
+   ```
 
-branch4:  NEC红外发射
+  2.调用示例
 
-branch5:  DAC DMA双通道
+```
+	Init_ad9910();			//模块初始化
+	Freq_convert(2000000);	//频率设置，精度1HZ
+	Amp_convert(150);		//幅值设置 1~649
+```
 
-branch6:  stm32f4数字滤波
-
-branch7:  FFT
-
-branch8:  AD9959驱动
-
-branch9:  DMA串口收发
-
-branch10: II2
-
-branch11: flash
-
-branch12: US-015
-
-branch13： SSD1306
-
-branch14： martix_key
