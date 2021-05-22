@@ -1,33 +1,26 @@
-# STM32F407_REBUILT
-为准备电赛对于STM32代码的阶段性整理
+# **stm32f407 TIM_CAP_REBUILT**
 
-branch2：tim_capture 定时器输入捕获代码整理
+- ## 校赛代码
 
-branch3:  pwm_gen  定时器PWM多路输出
+- 引脚配置
 
-branch4:  NEC红外发射
+  ```
+  /* ----------------PA0 -> 输入捕获-----------------------
+  				   PB1 -> PWM输出
+  				   PE0 -> OLED SCL
+  				   PE1 -> OLED SDA
+  				   PA4 -> DAC1
+  				   PA5 -> DAC2
+  				   PE0 -> OLED1 SCL
+  				   PE1 -> OLED1 SDA
+  -------------------------------------------------------*/
+  ```
 
-branch5:  DAC DMA双通道
+- 定时器采用PWM模式输出捕获测频，可测占空比 TIM5定时器使能
 
-branch6:  stm32f4数字滤波
+- DAC PWM输出波形，PWM到100K接负载消除振铃，DAC较高频率不可接负载
 
-branch7:  FFT
+- 矩阵键盘实现交互操控
 
-branch8:  AD9959驱动
-
-branch9:  DMA串口收发
-
-branch10: II2
-
-branch11: flash
-
-branch12: US-015
-
-branch13： SSD1306
-
-branch14： martix_key
-
-branch15： AD9910
-
-branch16： 校赛整理
+- 自写简陋的状态机函数STAGE来完成整个系统操控
 
